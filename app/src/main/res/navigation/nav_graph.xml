@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.senemyalin.budgetapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_incomeFragment2"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.senemyalin.budgetapp.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_incomeFragment2"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.senemyalin.budgetapp.ui.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income">
+        <action
+            android:id="@+id/action_incomeFragment2_to_expenseFragment2"
+            app:destination="@id/expenseFragment" />
+        <action
+            android:id="@+id/action_incomeFragment2_to_summaryFragment2"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseFragment"
+        android:name="com.senemyalin.budgetapp.ui.ExpenseFragment"
+        android:label="fragment_expense"
+        tools:layout="@layout/fragment_expense">
+        <action
+            android:id="@+id/action_expenseFragment2_to_incomeFragment2"
+            app:destination="@id/incomeFragment" />
+        <action
+            android:id="@+id/action_expenseFragment2_to_summaryFragment2"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.senemyalin.budgetapp.ui.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary">
+        <action
+            android:id="@+id/action_summaryFragment2_to_addOrEditFragment"
+            app:destination="@id/addOrEditFragment" />
+        <action
+            android:id="@+id/action_summaryFragment2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_summaryFragment2_to_expenseFragment2"
+            app:destination="@id/expenseFragment" />
+        <action
+            android:id="@+id/action_summaryFragment2_to_incomeFragment2"
+            app:destination="@id/incomeFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addOrEditFragment"
+        android:name="com.senemyalin.budgetapp.ui.AddOrEditFragment"
+        android:label="fragment_add_or_edit"
+        tools:layout="@layout/fragment_add_or_edit" >
+        <action
+            android:id="@+id/action_addOrEditFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+
+        <argument
+            android:name="budgetModel"
+            app:argType="com.senemyalin.budgetapp.data.BudgetModel"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+
+    </dialog>
+
+</navigation>

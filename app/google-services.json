@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "537304944795",
+    "project_id": "budgetapp-3bc94",
+    "storage_bucket": "budgetapp-3bc94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537304944795:android:088ca1d448a4ac7b6c763e",
+        "android_client_info": {
+          "package_name": "com.senemyalin.budgetapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537304944795-p137uhrsr5trp324sl62lvr7dk4unvea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.senemyalin.budgetapp",
+            "certificate_hash": "a0b2ed5df55e83bbe367dd7863a3f8274cafa0fb"
+          }
+        },
+        {
+          "client_id": "537304944795-kpb60fnb43s68htqn9gv9n3tm4f9eida.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2mapmut2i-rH2759pgAUXOIniMN28dKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537304944795-kpb60fnb43s68htqn9gv9n3tm4f9eida.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
