@@ -67,10 +67,10 @@ class SummaryFragment : Fragment(R.layout.fragment_summary), ItemListener {
                         document.get("title") as String,
                         (document.get("price") as Number).toDouble(),
                         document.get("description") as String,
-                        document.get("isIncome") as Boolean
+                        document.get("income") as Boolean
                     )
                 )
-                if (document.get("isIncome") as Boolean) {
+                if (document.get("income") as Boolean) {
                     totalBudget += document.get("price") as Double
                 } else {
                     totalBudget -= document.get("price") as Double

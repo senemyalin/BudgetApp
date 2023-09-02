@@ -38,18 +38,19 @@ class ExpenseFragment : Fragment(R.layout.fragment_expense), ItemListener {
             val list = arrayListOf<BudgetModel>()
             var totalBudget: Double = 0.0
             snapshot?.forEach { document ->
-                list.add(
-                    BudgetModel(
-                        document.id,
-                        document.get("title") as String,
-                        (document.get("price") as Number).toDouble(),
-                        document.get("description") as String,
-                        document.get("isIncome") as Boolean
+                if(!(document.get("income") as Boolean)){
+                    list.add(
+                        BudgetModel(
+                            document.id,
+                            document.get("title") as String,
+                            (document.get("price") as Number).toDouble(),
+                            document.get("description") as String,
+                            document.get("income") as Boolean
+                        )
                     )
-                )
-                if (document.get("isIncome") as Boolean) {
-                    totalBudget += document.get("price") as Double
-                } else {
+                }
+
+                if(!(document.get("income") as Boolean)){
                     totalBudget -= document.get("price") as Double
                 }
 
